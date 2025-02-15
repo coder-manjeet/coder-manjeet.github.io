@@ -239,10 +239,10 @@ button {
   border-radius: 0;
 }
 
-button:focus {
+/* button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
-}
+} */
 
 input,
 button,
@@ -11504,14 +11504,16 @@ pre .code {
 
 .header {
   position: relative;
-  height: 80vh;
-  min-height: 670px;
+  /* height: 80vh;
+  min-height: 670px; */
   background-image: url('../imgs/banner-bg.png');
   background-size: 100% auto;
-  background-position: center top;
+  /* background-position: center top; */
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+  aspect-ratio: 140 / 65;
+  width: 100%;
 }
 
 .header .container {
@@ -11552,11 +11554,11 @@ pre .code {
 
 @media (max-width: 767.98px) {
   .header {
-    height: 500px;
-    min-height: 500px;
+    /* height: 500px;
+    min-height: 500px; */
   }
   .header .social-icons {
-    margin: auto;
+    margin: auto 0 auto auto;
   }
   .header .header-content {
     padding: 20px;
