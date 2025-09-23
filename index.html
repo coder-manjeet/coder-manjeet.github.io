@@ -371,8 +371,8 @@
     </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <header class="header">
+<body data-spy="scroll" data-target=".navbar" data-offset="55" id="home">
+    <header class="header" id="parallax">
         <div class="container">
             <ul class="social-icons pt-3">
                 <li class="social-item"><a class="social-link text-light"
@@ -458,10 +458,17 @@
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">About Me</h3>
                 <span class="line mb-5"></span>
-                <h5 class="mb-3">Full-Stack Web Developer and Graphic Designer</h5>
+                <!-- <h5 class="mb-3">Full-Stack Web Developer and Graphic Designer</h5>
                 <p class="mt-20">I’m a Full-Stack Developer, Graphic Designer, and lifelong learner who loves blending
-                    creativity and technology to build impactful solutions.</p>
-                <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
+                    creativity and technology to build impactful solutions.</p> -->
+                <!-- <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button> -->
+                <p>
+                    I am a passionate Full-Stack Developer and Graphic Designer with over 7+ years of experience
+                    transforming ideas into impactful digital solutions.
+                </p>
+                <p>From crafting visually appealing designs to developing scalable applications, my journey has been
+                    fueled by creativity, curiosity, and a drive for continuous learning.
+                </p>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Personal Info</h3>
@@ -584,27 +591,33 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <h6 class="title text-danger">2022 - Present</h6>
+                            <p>Full-Stack Web Developer</p>
+                            <p class="subtitle">Led development for Laravel-based full stack projects, alongside React
+                                and Vue.</p>
+                            <p class="subtitle">Worked on telehealth dashboards and scalable backend systems.</p>
+                            <p class="subtitle">Explored Figma for UI/UX design, blending creative and technical
+                                expertise.</p>
+
+                            <hr>
+
+                            <h6 class="title text-danger">2019 - 2022</h6>
+                            <p>Web Developer</p>
+                            <p class="subtitle">Specialized in WordPress development, theme/plugin creation, and
+                                customization.</p>
+                            <p class="subtitle">Mastery in over 50+ WordPress most popular plugins, including
+                                WooCommerce, Paid
+                                Membership Pro, and Ultimate Members, Event Espresso and many others.</p>
+
+                            <hr>
+
                             <h6 class="title text-danger">2018 - 2019</h6>
                             <p>Graphic Designer</p>
                             <p class="subtitle">Designed websites, mobile app mockups, logos, and branding materials.
                             </p>
                             <p class="subtitle">Proficient in Photoshop, CorelDRAW, Adobe Illustrator, and Premiere Pro
                             </p>
-                            <hr>
-                            <h6 class="title text-danger">2019 - 2022</h6>
-                            <p>Web Developer</p>
-                            <p class="subtitle">Specialized in WordPress development, theme/plugin creation, and
-                                customization.</p>
-                            <p class="subtitle">Mastery in over 50 WordPress plugins, including WooCommerce, Paid
-                                Membership Pro, and Ultimate Members.</p>
-                            <hr>
-                            <h6 class="title text-danger">2022 - Present</h6>
-                            <p>Full-Stack Web Developer</p>
-                            <p class="subtitle">Led development for Laravel-based projects, integrating Vue.js and
-                                React.js.</p>
-                            <p class="subtitle">Worked on telehealth dashboards and scalable backend systems.</p>
-                            <p class="subtitle">Explored Figma for UI/UX design, blending creative and technical
-                                expertise.</p>
+
                         </div>
                     </div>
                 </div>
@@ -1148,45 +1161,54 @@
     <script src="assets/js/main.js"></script>
     <script>
         // Function to apply the theme based on stored preference
-    function applyTheme() {
-      const savedTheme = localStorage.getItem("theme");
-      const body = document.body;
-      
-      if (savedTheme === "night") {
-        document.documentElement.setAttribute("data-theme", "night");
-        body.classList.add("night");
-        document.getElementById("toggleSwitch").checked = true;
-      } else {
-        document.documentElement.removeAttribute("data-theme");
-        body.classList.remove("night");
-        document.getElementById("toggleSwitch").checked = false;
-      }
-    }
+        function applyTheme() {
+            const savedTheme = localStorage.getItem("theme");
+            const body = document.body;
 
-    // Function to toggle the theme
-    function toggleTheme() {
-      const toggleSwitch = document.getElementById("toggleSwitch");
-
-      toggleSwitch.addEventListener("change", function () {
-        const body = document.body;
-
-        if (this.checked) {
-          document.documentElement.setAttribute("data-theme", "night");
-          body.classList.add("night");
-          localStorage.setItem("theme", "night"); // Save to localStorage
-        } else {
-          document.documentElement.removeAttribute("data-theme");
-          body.classList.remove("night");
-          localStorage.setItem("theme", "day"); // Save to localStorage
+            if (savedTheme === "night") {
+                document.documentElement.setAttribute("data-theme", "night");
+                body.classList.add("night");
+                document.getElementById("toggleSwitch").checked = true;
+            } else {
+                document.documentElement.removeAttribute("data-theme");
+                body.classList.remove("night");
+                document.getElementById("toggleSwitch").checked = false;
+            }
         }
-      });
-    }
 
-    // Apply the saved theme on page load
-    document.addEventListener("DOMContentLoaded", () => {
-      applyTheme(); // Load the saved theme
-      toggleTheme(); // Set up the toggle listener
-    });
+        // Function to toggle the theme
+        function toggleTheme() {
+            const toggleSwitch = document.getElementById("toggleSwitch");
+
+            toggleSwitch.addEventListener("change", function () {
+                const body = document.body;
+
+                if (this.checked) {
+                    document.documentElement.setAttribute("data-theme", "night");
+                    body.classList.add("night");
+                    localStorage.setItem("theme", "night"); // Save to localStorage
+                } else {
+                    document.documentElement.removeAttribute("data-theme");
+                    body.classList.remove("night");
+                    localStorage.setItem("theme", "day"); // Save to localStorage
+                }
+            });
+        }
+
+        // Apply the saved theme on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            applyTheme(); // Load the saved theme
+            toggleTheme(); // Set up the toggle listener
+        });
+
+        const parallax = document.getElementById("parallax");
+
+        // Parallax Effect for DIV 1
+        window.addEventListener("scroll", function () {
+            let offset = window.pageYOffset;
+            parallax.style.backgroundPositionY = offset * 0.7 + "px";
+            // DIV 1 background will move slower than other elements on scroll.
+        });
     </script>
 
 </body>
