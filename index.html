@@ -54,6 +54,9 @@
             color: var(--text-color);
         }
 
+        .d-none {
+            display: none !important;
+        }
 
         .switch {
             position: fixed;
@@ -368,26 +371,372 @@
             left: 2px;
             width: 30px;
         }
+
+        /* Social Links Section Styles - Neumorphic Design */
+        .social-links-section {
+            padding: 40px 0;
+        }
+
+        .sm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .link {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+            border-radius: 30%;
+            box-shadow: 9px 9px 18px #bebebe, -9px -9px 18px #fff;
+            position: relative;
+            overflow: hidden;
+            line-height: 90px;
+            font-size: 30px;
+            transition: 0.8s;
+            text-align: center;
+            padding: 5.5px;
+            text-decoration: none;
+            background: #ffffff;
+        }
+
+        .bluesky {
+            color: #0085ff;
+        }
+
+        .ig {
+            color: #e949a3;
+        }
+
+        .git {
+            color: #222;
+        }
+
+        .medium {
+            color: #00ab6c;
+        }
+
+        .fb {
+            color: #4267b2;
+        }
+
+        .tweet {
+            color: #000000;
+        }
+
+        .devto {
+            color: #0a0a0a;
+        }
+
+        .discord {
+            color: #5865f2;
+        }
+
+        .bluesky:hover,
+        .ig:hover,
+        .git:hover,
+        .medium:hover,
+        .fb:hover,
+        .tweet:hover,
+        .devto:hover,
+        .discord:hover {
+            color: #ffffff;
+        }
+
+        .link svg,
+        .link i {
+            position: relative;
+            z-index: 2;
+        }
+
+        .link::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0%;
+            z-index: 1;
+            transition: 0.8s;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .bluesky::before {
+            background: #0085ff;
+        }
+
+        .ig::before {
+            background: #e949a3;
+        }
+
+        .git::before {
+            background: #222;
+        }
+
+        .medium::before {
+            background: #00ab6c;
+        }
+
+        .fb::before {
+            background: #4267b2;
+        }
+
+        .tweet::before {
+            background: #000000;
+        }
+
+        .devto::before {
+            background: #0a0a0a;
+        }
+
+        .discord::before {
+            background: #5865f2;
+        }
+
+        .bluesky:hover::before,
+        .ig:hover::before,
+        .git:hover::before,
+        .medium:hover::before,
+        .fb:hover::before,
+        .tweet:hover::before,
+        .devto:hover::before,
+        .discord:hover::before {
+            height: 180%;
+        }
+
+        /* Night Mode Styles for Social Links */
+        [data-theme="night"] .link {
+            background: #1a1a1a;
+            box-shadow: 9px 9px 18px #0f0f0f, -9px -9px 18px #252525;
+        }
+
+        [data-theme="night"] .git {
+            color: #ffffff;
+        }
+
+        [data-theme="night"] .devto {
+            color: #ffffff;
+        }
+
+        [data-theme="night"] .tweet {
+            color: #ffffff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .link {
+                width: 70px;
+                height: 70px;
+                font-size: 24px;
+                line-height: 70px;
+                margin: 8px;
+            }
+        }
+
+        /* Small Social Links Styles (30x30 pixels) */
+        .sm-small {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-small {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 4px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #fff;
+            position: relative;
+            overflow: hidden;
+            line-height: 30px;
+            font-size: 15px;
+            transition: 0.8s;
+            text-align: center;
+            text-decoration: none;
+            background: #ffffff;
+        }
+
+        .link-small.bluesky {
+            color: #0085ff;
+        }
+
+        .link-small.ig {
+            color: #e949a3;
+        }
+
+        .link-small.git {
+            color: #222;
+        }
+
+        .link-small.medium {
+            color: #00ab6c;
+        }
+
+        .link-small.fb {
+            color: #4267b2;
+        }
+
+        .link-small.tweet {
+            color: #000000;
+        }
+
+        .link-small.devto {
+            color: #0a0a0a;
+        }
+
+        .link-small.discord {
+            color: #5865f2;
+        }
+
+        .link-small.bluesky:hover,
+        .link-small.ig:hover,
+        .link-small.git:hover,
+        .link-small.medium:hover,
+        .link-small.fb:hover,
+        .link-small.tweet:hover,
+        .link-small.devto:hover,
+        .link-small.discord:hover {
+            color: #ffffff;
+        }
+
+        .link-small svg,
+        .link-small i {
+            position: relative;
+            z-index: 2;
+        }
+
+        .link-small::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0%;
+            z-index: 1;
+            transition: 0.8s;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .link-small.bluesky::before {
+            background: #0085ff;
+        }
+
+        .link-small.ig::before {
+            background: #e949a3;
+        }
+
+        .link-small.git::before {
+            background: #222;
+        }
+
+        .link-small.medium::before {
+            background: #00ab6c;
+        }
+
+        .link-small.fb::before {
+            background: #4267b2;
+        }
+
+        .link-small.tweet::before {
+            background: #000000;
+        }
+
+        .link-small.devto::before {
+            background: #0a0a0a;
+        }
+
+        .link-small.discord::before {
+            background: #5865f2;
+        }
+
+        .link-small.bluesky:hover::before,
+        .link-small.ig:hover::before,
+        .link-small.git:hover::before,
+        .link-small.medium:hover::before,
+        .link-small.fb:hover::before,
+        .link-small.tweet:hover::before,
+        .link-small.devto:hover::before,
+        .link-small.discord:hover::before {
+            height: 180%;
+        }
+
+        /* Header Social Links - No Shadows */
+        .header-social-links .link-small {
+            box-shadow: none;
+        }
+
+        /* Night Mode Styles for Small Social Links */
+        [data-theme="night"] .link-small {
+            background: #1a1a1a;
+            box-shadow: 3px 3px 6px #0f0f0f, -3px -3px 6px #252525;
+        }
+
+        /* Header social links keep no shadows in night mode too */
+        [data-theme="night"] .header-social-links .link-small {
+            box-shadow: none;
+        }
+
+        [data-theme="night"] .link-small.git {
+            color: #ffffff;
+        }
+
+        [data-theme="night"] .link-small.devto {
+            color: #ffffff;
+        }
+
+        [data-theme="night"] .link-small.tweet {
+            color: #ffffff;
+        }
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="55" id="home">
     <header class="header" id="parallax">
         <div class="container">
-            <ul class="social-icons pt-3">
-                <li class="social-item"><a class="social-link text-light"
-                        href="https://www.facebook.com/creativeartsmanjeet"><i class="ti-facebook"
-                            aria-hidden="true"></i></a></li>
-                <!-- <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-twitter"
-                            aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-google"
-                            aria-hidden="true"></i></a></li> -->
-                <li class="social-item"><a class="social-link text-light"
-                        href="https://www.instagram.com/creativeartsmanjeet"><i class="ti-instagram"
-                            aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.github.com/coder-manjeet"><i
-                            class="ti-github" aria-hidden="true"></i></a></li>
-            </ul>
+            <div class="header-social-links">
+                <div class="sm-small">
+                    <a href="https://www.github.com/coder-manjeet" target="_blank" class="link-small git" title="Visit my GitHub profile">
+                        <i class="ti-github"></i>
+                    </a>
+                    <a href="https://medium.com/@codermanjeet" target="_blank" class="link-small medium" title="Read my articles on Medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/codermanjeet" target="_blank" class="link-small fb" title="Connect with me on Facebook">
+                        <i class="ti-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/codermanjeet" target="_blank" class="link-small ig" title="Follow me on Instagram">
+                        <i class="ti-instagram"></i>
+                    </a>
+                    <a href="https://x.com/codermanjeet" target="_blank" class="link-small tweet" title="Follow me on X (Twitter)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://bsky.app/profile/codermanjeet.bsky.social" target="_blank" class="link-small bluesky" title="Follow me on Bluesky">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://dev.to/codermanjeet" target="_blank" class="link-small devto" title="Read my posts on Dev.to">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"/>
+                        </svg>
+                    </a>
+                    <a href="https://discord.com/users/codermanjeet" target="_blank" class="link-small discord" title="Join me on Discord">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
             <!-- <div class="header-content">
                 <h4 class="header-subtitle">Hello, I am</h4>
                 <h1 class="header-title">Manjeet Singh</h1>
@@ -441,9 +790,9 @@
                     <li class="nav-item">
                         <a href="#resume" class="nav-link">Resume</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="#portfolio" class="nav-link">Projects</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item last-item">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
@@ -479,20 +828,44 @@
                     <li><span>Phone</span> : 855 898 9122</li>
                     <li><span>Address</span> : #100, Street No. 3, Mandeep Nagar, Ludhiana 141008, Ludhiana.</li>
                 </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link"
-                            href="https://www.facebook.com/creativeartsmanjeet"><i class="ti-facebook"
-                                aria-hidden="true"></i></a></li>
-                    <!-- <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter"
-                                aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-google"
-                                aria-hidden="true"></i></a></li> -->
-                    <li class="social-item"><a class="social-link"
-                            href="https://www.instagram.com/creativeartsmanjeet"><i class="ti-instagram"
-                                aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://www.github.com/coder-manjeet"><i
-                                class="ti-github" aria-hidden="true"></i></a></li>
-                </ul>
+                <div class="personal-info-social">
+                    <div class="sm-small">
+                        <a href="https://www.github.com/coder-manjeet" target="_blank" class="link-small git" title="Visit my GitHub profile">
+                            <i class="ti-github"></i>
+                        </a>
+                        <a href="https://medium.com/@codermanjeet" target="_blank" class="link-small medium" title="Read my articles on Medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/codermanjeet" target="_blank" class="link-small fb" title="Connect with me on Facebook">
+                            <i class="ti-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/codermanjeet" target="_blank" class="link-small ig" title="Follow me on Instagram">
+                            <i class="ti-instagram"></i>
+                        </a>
+                        <a href="https://x.com/codermanjeet" target="_blank" class="link-small tweet" title="Follow me on X (Twitter)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://bsky.app/profile/codermanjeet.bsky.social" target="_blank" class="link-small bluesky" title="Follow me on Bluesky">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://dev.to/codermanjeet" target="_blank" class="link-small devto" title="Read my posts on Dev.to">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"/>
+                            </svg>
+                        </a>
+                        <a href="https://discord.com/users/codermanjeet" target="_blank" class="link-small discord" title="Join me on Discord">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">My Expertise</h3>
@@ -860,7 +1233,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="section bg-custom-gray" id="portfolio">
+    <section class="section bg-custom-gray d-none" id="portfolio">
         <div class="container">
             <h1 class="mb-5"><span class="text-danger">My</span> Projects</h1>
             <div class="portfolio">
@@ -1057,39 +1430,67 @@
     <!-- End of portfolio section -->
 
 
-    <div class="section contact" id="contact" style="background-color: #17263C;">
+    <div class="section contact" id="contact">
         <!-- <div id="map" class="map"></div> -->
         <div class="container">
-            <div class="row">
-                <!-- <div class="col-lg-8">
-                    <div class="contact-form-card">
-                        <h4 class="contact-title">Send a message</h4>
-                        <form action="">
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Name *" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id=" placeholder=" Message *" rows="7"
-                                    required></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <button type="submit" class="form-control btn btn-primary">Send Message</button>
-                            </div>
-                        </form>
+            <!-- Social Links Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="social-links-section text-center">
+                        <h4 class="contact-title mb-4" >Connect With Me</h4>
+                        <div class="sm">
+                            <a href="https://www.github.com/coder-manjeet" target="_blank" class="link git" title="Visit my GitHub profile">
+                                <i class="ti-github"></i>
+                            </a>
+                            <a href="https://medium.com/@codermanjeet" target="_blank" class="link medium" title="Read my articles on Medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/codermanjeet" target="_blank" class="link fb" title="Connect with me on Facebook">
+                                <i class="ti-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/codermanjeet" target="_blank" class="link ig" title="Follow me on Instagram">
+                                <i class="ti-instagram"></i>
+                            </a>
+                            <a href="https://x.com/codermanjeet" target="_blank" class="link tweet" title="Follow me on X (Twitter)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+                            <a href="https://bsky.app/profile/codermanjeet.bsky.social" target="_blank" class="link bluesky" title="Follow me on Bluesky">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://dev.to/codermanjeet" target="_blank" class="link devto" title="Read my posts on Dev.to">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"/>
+                                </svg>
+                            </a>
+                            <a href="https://discord.com/users/codermanjeet" target="_blank" class="link discord" title="Join me on Discord">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div> -->
+                </div>
+            </div>
+            <!-- End Social Links Section -->
+            
+            <div class="row">
                 <div class="col-lg-12">
                     <div class="contact-info-card">
                         <h4 class="contact-title">Get in touch</h4>
+
                         <div class="row mb-2">
                             <div class="col-1 pt-1 mr-1">
-                                <i class="ti-mobile icon-md"></i>
+                                <i class="ti-envelope icon-md"></i>
                             </div>
-                            <div class="col-10 ">
-                                <h6 class="d-inline">Phone : <br> <span class="text-muted">855 898 9122</span></h6>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">codermanjeet@gmail.com</span>
+                                </h6>
                             </div>
                         </div>
                         <div class="row mb-2">
@@ -1101,30 +1502,6 @@
                                         Nagar, Ludhiana 141008, Ludhiana.</span></h6>
                             </div>
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-envelope icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Email :<br> <span class="text-muted">codermanjeet@gmail.com</span>
-                                </h6>
-                            </div>
-                        </div>
-                        <ul class="social-icons pt-3">
-                            <li class="social-item"><a class="social-link"
-                                    href="https://www.facebook.com/creativeartsmanjeet"><i class="ti-facebook"
-                                        aria-hidden="true"></i></a></li>
-                            <!-- <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter"
-                                        aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link" href="#"><i class="ti-google"
-                                        aria-hidden="true"></i></a></li> -->
-                            <li class="social-item"><a class="social-link"
-                                    href="https://www.instagram.com/creativeartsmanjeet"><i class="ti-instagram"
-                                        aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link"
-                                    href="https://www.github.com/coder-manjeet"><i class="ti-github"
-                                        aria-hidden="true"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

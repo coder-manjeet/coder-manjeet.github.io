@@ -12069,11 +12069,11 @@ pre .code {
 	margin-bottom: 30px;
 }
 
-.contact .contact-title::after {
+/* .contact .contact-title::after {
 	content: "";
 	width: 20px;
 	height: 2px;
 	background: #0ba2fb;
 	display: block;
 	margin-top: 10px;
-}
+} */
