@@ -12058,7 +12058,7 @@ pre .code {
 .contact .contact-info-card {
 	padding: 35px;
 	background: var(--white);
-	min-height: 350px;
+	/* min-height: 350px; */
 }
 
 .contact .contact-info-card {
